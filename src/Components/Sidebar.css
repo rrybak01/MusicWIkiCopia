@@ -8,10 +8,11 @@
 
 .Sidebar-header {
     border-bottom: 0.5px inset grey;
-  }
+    align-items:center;
+}
 
 .lista {
-    height: auto;
+    height: 60px;
     padding: 0;
     width: 100%;
 
@@ -19,33 +20,30 @@
 
 .lista .elementosLista, .Sidebar-header , .sidebar-link{
     width: 100%;
-    height: 50px;
+    height: 60px;
     list-style-type: none;
     margin: 0%;
     display: flex;
     flex-direction: row;
     color: white;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-decoration:none;
-
 }
 
 .lista .elementosLista:hover{
     cursor: pointer;
-    background-color: blueviolet;
+    color: blueviolet;
 }
 
 .active{
     cursor: pointer;
-    background-color: blueviolet;
+    color: blueviolet;
 }
 
 
 .elementosLista #icon{
     flex: 30%;
-    display: grid;
-    place-items: center;
 }
 
 .elementosLista #title{

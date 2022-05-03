@@ -4,7 +4,7 @@ import { Card, Container, Table, Row, Col } from 'react-bootstrap';
 import './Elementos.css';
 import axios from "axios";
 
-class Home extends React.Component {
+class Radio extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -21,7 +21,7 @@ class Home extends React.Component {
     };
     
     const response = await fetch(
-      'https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=drake',
+      'https://cors-anywhere.herokuapp.com/https://api.deezer.com/radio',
       requestOptions
     );
 
@@ -41,9 +41,8 @@ class Home extends React.Component {
             return (
               <div className="contenedorTarjeta">
                 <div className='tarjeta'>
-                  <img src={item.album.cover_medium} />
+                  <img src={item.picture_medium} />
                   <p>{item.title}</p>
-                  <p>{item.artist.name}</p>
                 </div>
               </div>
             );
@@ -54,4 +53,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default Radio;

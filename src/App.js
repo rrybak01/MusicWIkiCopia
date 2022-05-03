@@ -1,12 +1,13 @@
 import './App.css';
 import Sidebar  from './Components/Sidebar';
-import { SidebarData } from './Components/SidebarData';
+import { SidebarData } from './Components/Data/SidebarData';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
 import uuid from "react-uuid";
+import SearchBar from './Components/SearchBar';
 
 
 function App() {

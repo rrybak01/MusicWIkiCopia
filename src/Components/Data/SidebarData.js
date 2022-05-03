@@ -1,12 +1,15 @@
-import { Home } from './Home';
-import { Artistas } from './Artistas';
-import { Canciones } from './Canciones';
-import { Albums } from './Albums';
+import Home from '../Home';
+import { Artistas } from '../Artistas';
+import { Canciones } from '../Canciones';
+import { Albums } from '../Albums';
+import Radio from '../Radio';
+import Perfil from '../Perfil';
 import { Icon } from "react-icons-kit";
 import {ic_home} from 'react-icons-kit/md/ic_home';
 import {ic_person} from 'react-icons-kit/md/ic_person';
 import {ic_music_note} from 'react-icons-kit/md/ic_music_note';
 import {ic_disc_full} from 'react-icons-kit/md/ic_disc_full';
+import {ic_radio} from 'react-icons-kit/md/ic_radio';
 
 export const SidebarData = [
     {
@@ -16,6 +19,15 @@ export const SidebarData = [
         title: 'Home',
         icon: <Icon icon={ic_home} />,
         component: <Home />,
+        
+      },
+      {
+    
+        link: '/radio',
+        defaultRoute: false,
+        title: 'Radio',
+        icon: <Icon icon={ic_radio} />,
+        component: <Radio />,
         
       },
     {
@@ -43,6 +55,14 @@ export const SidebarData = [
         title: 'Albums',
         icon: <Icon icon={ic_disc_full} />,
         component: <Albums />
+        
+      },
+      {
+        
+        link: '/perfil',
+        defaultRoute: false,
+        title: 'Perfil',
+        component: <Perfil />
         
       },
 ]

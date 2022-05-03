@@ -5,14 +5,24 @@
     width: 100%;
     height: 100vh;
     overflow-y: auto;
+    
 }
 
 .contenedorTarjeta {
     width: 350px;
-    height: auto;
+    height: 200px;
     margin-top: 60px;
     margin-left: 60px;
+    transition: transform 0.2s ease-out;
     
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.contenedorTarjeta:hover{
+    cursor: pointer;
+    transform: translate(5px, -10px);
 }
 
 .tarjeta {

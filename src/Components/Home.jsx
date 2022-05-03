@@ -3,6 +3,7 @@ import uuid from 'react-uuid';
 import { Card, Container, Table, Row, Col } from 'react-bootstrap';
 import './Elementos.css';
 import axios from "axios";
+import StandarCard from "./StandardCard/StdCard";
 
 class Home extends React.Component {
   constructor() {
@@ -35,21 +36,16 @@ class Home extends React.Component {
 
   render() {
     return (
+      <React.Fragment>
       <div className="contenedor">
-         
-          {this.state.tableData.map((item) => {
-            return (
-              <div className="contenedorTarjeta">
-                <div className='tarjeta'>
-                  <img src={item.album.cover_medium} />
-                  <p>{item.title}</p>
-                  <p>{item.artist.name}</p>
-                </div>
-              </div>
-            );
-          })}
-        
+        {this.state.tableData.map((radio) => (
+          <StandarCard
+            text={radio.title_short}
+            pic={radio.album.cover_big}
+          />
+        ))}
       </div>
+    </React.Fragment>
     );
   }
 }

@@ -3,6 +3,7 @@ import uuid from 'react-uuid';
 import { Card, Container, Table, Row, Col } from 'react-bootstrap';
 import './Elementos.css';
 import axios from "axios";
+import StandarCard from "./StandardCard/StdCard";
 
 class Radio extends React.Component {
   constructor() {
@@ -13,16 +14,9 @@ class Radio extends React.Component {
   }
 
   async componentDidMount() {
-    var myHeaders = new Headers();
-
-    var requestOptions = {
-      method: 'GET',
-      redirect: 'follow',
-    };
     
     const response = await fetch(
-      'https://cors-anywhere.herokuapp.com/https://api.deezer.com/radio',
-      requestOptions
+      'https://cors-anywhere.herokuapp.com/https://api.deezer.com/radio'
     );
 
     const responseData = await response.json();
@@ -35,20 +29,16 @@ class Radio extends React.Component {
 
   render() {
     return (
-      <div className="contenedor">
-         
-          {this.state.tableData.map((item) => {
-            return (
-              <div className="contenedorTarjeta">
-                <div className='tarjeta'>
-                  <img src={item.picture_medium} />
-                  <p>{item.title}</p>
-                </div>
-              </div>
-            );
-          })}
-        
-      </div>
+      <React.Fragment>
+        <div className="contenedor">
+          {this.state.tableData.map((radio) => (
+            <StandarCard
+              text={radio.title}
+              pic={radio.picture_big}
+            />
+          ))}
+        </div>
+      </React.Fragment>
     );
   }
 }

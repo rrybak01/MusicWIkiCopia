@@ -10,14 +10,13 @@
 
 .contenedorTarjeta {
     width: 350px;
-    height: 200px;
+    height: auto;
     margin-top: 60px;
     margin-left: 60px;
     transition: transform 0.2s ease-out;
     
     position: relative;
     border-radius: 12px;
-    overflow: hidden;
 }
 
 .contenedorTarjeta:hover{

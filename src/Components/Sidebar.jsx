@@ -23,7 +23,6 @@ class Sidebar extends React.Component {
                                 to={item.link}
                                 className="sidebar-link"
                                 activeClassName="active"> 
-                                <div id="icono">{item.icon}</div>
                                 <div id="titulo">{item.title}</div>
                             </NavLink>
                         </li>

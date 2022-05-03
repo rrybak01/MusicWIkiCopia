@@ -1,8 +1,6 @@
 import React from 'react';
 import uuid from 'react-uuid';
-import { Card, Container, Table, Row, Col } from 'react-bootstrap';
 import './Elementos.css';
-import axios from "axios";
 import StandarCard from "./StandardCard/StdCard";
 
 class Home extends React.Component {
@@ -14,16 +12,8 @@ class Home extends React.Component {
   }
 
   async componentDidMount() {
-    var myHeaders = new Headers();
-
-    var requestOptions = {
-      method: 'GET',
-      redirect: 'follow',
-    };
-    
     const response = await fetch(
-      'https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=drake',
-      requestOptions
+      'https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/0/playlists'
     );
 
     const responseData = await response.json();
@@ -38,10 +28,10 @@ class Home extends React.Component {
     return (
       <React.Fragment>
       <div className="contenedor">
-        {this.state.tableData.map((radio) => (
+        {this.state.tableData.map((item) => (
           <StandarCard
-            text={radio.title_short}
-            pic={radio.album.cover_big}
+            pic={item.picture_big}
+            key={uuid()}
           />
         ))}
       </div>

@@ -31,10 +31,11 @@ class Radio extends React.Component {
     return (
       <React.Fragment>
         <div className="contenedor">
-          {this.state.tableData.map((radio) => (
+          {this.state.tableData.map((item) => (
             <StandarCard
-              text={radio.title}
-              pic={radio.picture_big}
+              text={item.title}
+              pic={item.picture_big}
+              key={uuid()}
             />
           ))}
         </div>

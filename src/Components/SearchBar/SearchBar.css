@@ -1,0 +1,35 @@
+.contenedorSearchbar {
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    background-color: rgb(15, 15, 15);
+    border-bottom: 1px solid grey;
+    padding-top: 12px;
+    text-align: left;
+}
+
+  .search-term {
+    width: 350px;
+    border: 2px solid #01d28e;
+    height: 35px;
+    border-radius: 5px 0 0 5px;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .botonBuscar {
+    width: 40px;
+    height: 35px;
+    border: 1px solid #01d28e;
+    background: #01d28e;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+
+  .searchbar {
+    margin-left: 50px;
+  }
+
+  /**/

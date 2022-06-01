@@ -1,25 +1,17 @@
-import Home from '../Home';
-import Artistas from '../Artistas';
-import Canciones from '../Canciones';
-import Albums from '../Albums';
-import Radio from '../Radio';
-import Perfil from '../Perfil';
+import Home from '../Elementos/Home';
+import Artistas from '../Elementos/Artistas';
+import Canciones from '../Elementos/Canciones';
+import Albums from '../Elementos/Albums';
+import Login from '../Login/Login';
+import SearchBar from "../SearchBar/SearchBar";
 
 export const SidebarData = [
     {
     
         link: '/',
         defaultRoute: true,
-        title: 'Home',
+        title: 'Inicio',
         component: <Home />,
-        
-      },
-      {
-    
-        link: '/radio',
-        defaultRoute: false,
-        title: 'Radio',
-        component: <Radio />,
         
       },
     {
@@ -48,10 +40,18 @@ export const SidebarData = [
       },
       {
         
+        link: '/buscar',
+        defaultRoute: false,
+        title: 'Buscar',
+        component: <SearchBar />
+        
+      },
+      {
+        
         link: '/perfil',
         defaultRoute: false,
         title: 'Perfil',
-        component: <Perfil />
+        component: <Login />
         
       },
 ]
